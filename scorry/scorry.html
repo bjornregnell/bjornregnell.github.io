@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scorry: correlation and summary statistics</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: system-ui, sans-serif;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      line-height: 1.5;
+      margin: 0;
+      padding: 5vw;
+    }
+    input, button {
+      font: inherit;
+      padding: 0.4em 0.6em;
+    }
+    input { width: 100%; max-width: 30em; }
+    .tip {
+      position: relative;
+      cursor: help;
+      border-bottom: 1px dotted #888;
+    }
+    .tip::after {
+      content: attr(data-tip);
+      position: absolute;
+      left: 0; top: 100%;
+      z-index: 1;
+      background: #333;
+      color: #fff;
+      padding: 0.4em 0.6em;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      width: max-content;
+      max-width: 25em;
+      white-space: normal;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
+    }
+    .tip:hover::after { opacity: 1; }
+  </style>
+</head>
+<body>
+  <h1>Scorry: correlation and summary statistics</h1>
+  <p>Written in <a href="https://www.scala-js.org/">Scala.js</a> with <a href="https://laminar.dev/">Laminar</a> — <a href="https://github.com/bjornregnell/scorry">source on GitHub</a></p>
+  <div id="app"></div>
+  <script src="./main.js"></script>
+</body>
+</html>
